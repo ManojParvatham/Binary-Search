@@ -1,14 +1,12 @@
 import random
 import time
 
-
 def naive_search(l, target):
     #l = [1, 5, 13, 20]
     for i in range(len(l)):
         if l[i] == target:
             return i
     return -1
-
 
 def binary_search(l, target, low=None, high=None):
     if low is None:
