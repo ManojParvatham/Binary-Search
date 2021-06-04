@@ -3,7 +3,7 @@ import time
 
 
 def naive_search(l, target):
-    # example l = [1, 3, 10, 12]
+    #l = [1, 5, 13, 20]
     for i in range(len(l)):
         if l[i] == target:
             return i
@@ -26,13 +26,11 @@ def binary_search(l, target, low=None, high=None):
     elif target < l[midpoint]:
         return binary_search(l, target, low, midpoint-1)
     else:
-        # target > l[midpoint]
         return binary_search(l, target, midpoint+1, high)
 
 if __name__=='__main__':
     
     length = 10000
-    # build a sorted list of length 10000
     sorted_list = set()
     while len(sorted_list) < length:
         sorted_list.add(random.randint(-3*length, 3*length))
