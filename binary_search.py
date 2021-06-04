@@ -19,7 +19,7 @@ def binary_search(l, target, low=None, high=None):
     if high < low:
         return -1
 
-    midpoint = (low + high) // 2  # 2
+    midpoint = (low + high) // 2
 
     if l[midpoint] == target:
         return midpoint
@@ -28,7 +28,7 @@ def binary_search(l, target, low=None, high=None):
     else:
         return binary_search(l, target, midpoint+1, high)
 
-if __name__=='__main__':
+if __name__ == '__main__':
     
     length = 10000
     sorted_list = set()
